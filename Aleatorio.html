@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let generadorAleatorio = (min, max) => {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        for(let i = 0; i <= 100; i++){
+            document.write(generadorAleatorio(10,20));
+            document.write("<br>");
+        }
+
+        let array = [];
+        while(array.length < 10){
+            let numeroAleatorio = Math.floor(Math.random() * 10) + 1;
+            if(array.indexOf(numeroAleatorio) === -1){
+                array.push(numeroAleatorio);
+            }
+        }
+        console.log(array);
+        array_ordenado = array.sort();
+        array_bien_ordenado = array.sort(function(a,b) {
+            return a - b
+        })
+        console.log(array_bien_ordenado);
+        console.log(array_ordenado);
+        array_inverso = array.reverse();
+        console.log(array_inverso);*/
+
+        let producto = [
+            {nombre: 'Juan', edad: 34},
+            {nombre: 'Pepa', edad: 44},
+            {nombre: 'Ana', edad: 24},
+            {nombre: 'Luis', edad: 14}
+        ]
+        let max = producto.reduce(function(max,val){
+        return val.edad > max.edad ? val:max}, producto[0])
+
+        let min = producto.reduce(function(min,val){
+            return val.edad < min.edad ? val:min}, producto[0]);
+
+        document.write("mayor "+ max.nombre + " de " + max.edad + " años" + "<br>");
+        document.write("Miembro mas joven: " +min.nombre+ " de " +min.edad+ " años ");
+
+    </script>
+</body>
+</html>

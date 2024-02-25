@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*let dias = new Array(7), num;
+        dias[0] = "Lunes"
+        dias[1] = "Martes"
+        dias[2] = "Miercoles"
+        dias[3] = "Jueves"
+        dias[4] = "Viernes"
+        dias[5] = "Sabado"
+        dias[6] = "Domingo"
+        num = parseInt(prompt("Numero del dia"));
+        if(num > 7 || num <= 0){
+            alert("Ese dia no existe")
+        }else{
+            alert("El dia es " + dias[num -1]);
+        }
+        document.write(dias + "<br>");
+        document.write(dias.length + "<br>");
+        document.write(dias[dias.length -1] + "<br>");
+        document.write(dias.join(" + ") + "<br>");
+
+        dias.push("Agosto");
+        document.write(dias + "<br>");
+        document.write("Nueva longitud del array es: " + dias.length + "<br>" );
+        //unsift se añade al principio;
+        
+        dias.pop();
+        document.write(dias + "<br>");
+        document.write("Nueva longitud del array es: " + dias.length + "<br>" );*/
+        //shift borra el primero
+
+        dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+        dias.forEach(function(valor, i, lista){
+            lista[i] = valor.toUpperCase();
+        })
+        console.table(dias);
+    </script>
+</body>
+</html>

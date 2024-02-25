@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calculator.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="CALCULADORA">
+        <form name="calculadora">
+            <input type="textfield" id="textarea" name="ans" value="" autocomplete="off" readonly>
+            <div class="FILA1">
+                <input type="button" value="M+" id="gris">
+                <input type="button" value="e" onclick="document.calculadora.ans.value+=Math.E" id="gris">
+                <input type="button" value="π" onclick="document.calculadora.ans.value+=Math.PI" id="gris">
+                <input type="button" value="AC" id="gris">
+                <input type="reset" value="C" id="gris">
+            </div>
+            <br>
+            <div class="FILA2">
+                <input type="button" value="sin" id="gris">
+                <input type="button" value="9" onclick="document.calculadora.ans.value+='9'" id="naranja">
+                <input type="button" value="8" onclick="document.calculadora.ans.value+='8'" id="naranja">
+                <input type="button" value="7" onclick="document.calculadora.ans.value+='7'" id="naranja">
+                <input type="button" value="÷" onclick="document.calculadora.ans.value+='/'" id="negro">
+            </div>
+            <br>
+            <div class="FILA3">
+                <input type="button" value="cos" id="gris">
+                <input type="button" value="6" id="naranja" onclick="document.calculadora.ans.value+='6'">
+                <input type="button" value="5" id="naranja" onclick="document.calculadora.ans.value+='5'">
+                <input type="button" value="4" id="naranja" onclick="document.calculadora.ans.value+='4'">
+                <input type="button" value="X" id="negro" onclick="document.calculadora.ans.value+='*'">
+            </div>
+            <br>
+            <div class="FILA4">
+                <input type="button" value="tan" id="gris">
+                <input type="button" value="3" id="naranja" onclick="document.calculadora.ans.value+='3'">
+                <input type="button" value="2" id="naranja" onclick="document.calculadora.ans.value+='2'">
+                <input type="button" value="1" id="naranja" onclick="document.calculadora.ans.value+='1'">
+                <input type="button" value="+" id="negro" onclick="document.calculadora.ans.value+='+'">
+            </div>
+            <br>
+            <div class="FILA5">
+                <input type="button" value="√" id="gris">
+                <input type="button" value="y√x" id="gris">
+                <input type="button" value="0" id="naranja" onclick="document.calculadora.ans.value+='0'">
+                <input type="button" value="-" id="gris" onclick="document.calculadora.ans.value+='-'">
+                <input type="button" value="=" id="negro" onclick="document.calculadora.ans.value=eval(document.calculadora.ans.value)">
+            </div>
+            <br>
+            <div class="FILA6">
+                <input type="button" value="x!" id="gris">
+                <input type="button" value="EXP" id="gris">
+                <input type="button" value="x10x" id="gris">
+                <input type="button" value="%" id="gris" onclick="document.calculadora.ans.value+='%'">
+                <input type="button" value="." id="gris" onclick="document.calculadora.ans.value+='.'">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
