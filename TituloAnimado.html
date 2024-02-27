@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Este es el titulo mas chulo en todas las webs</title>
+</head>
+
+<body onload="tituloAnimado(true)">
+    <script>
+        function tituloAnimado(iniciar) {
+            if (iniciar) {
+                document.title = document.title.replaceAll(" ", "\xA0") + "-";
+                iniciar = false;
+            }
+            var actual = document.title;
+            var ind;
+            if (actual[0] == "\xA0") {
+                ind = 2;
+            } else
+                ind = 1;
+            sp = actual.substring(0, ind);
+            document.title = actual.substr(ind) + sp;
+            setTimeout(tituloAnimado, 100, iniciar);
+        }
+    </script>
+</body>
+
+</html>
