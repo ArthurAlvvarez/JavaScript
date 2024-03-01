@@ -24,7 +24,7 @@
             </div>
             <br>
             <div class="FILA2">
-                <input type="button" value="sin" id="gris">
+                <input type="button" value="sin" onclick="document.calculadora.ans.value=Math.sin(document.calculadora.ans.value) id="gris">
                 <input type="button" value="9" onclick="document.calculadora.ans.value+='9'" id="naranja">
                 <input type="button" value="8" onclick="document.calculadora.ans.value+='8'" id="naranja">
                 <input type="button" value="7" onclick="document.calculadora.ans.value+='7'" id="naranja">
@@ -32,7 +32,7 @@
             </div>
             <br>
             <div class="FILA3">
-                <input type="button" value="cos" id="gris">
+                <input type="button" value="cos" onclick="document.calculadora.ans.value=Math.cos(document.calculadora.ans.value) id="gris">
                 <input type="button" value="6" id="naranja" onclick="document.calculadora.ans.value+='6'">
                 <input type="button" value="5" id="naranja" onclick="document.calculadora.ans.value+='5'">
                 <input type="button" value="4" id="naranja" onclick="document.calculadora.ans.value+='4'">
@@ -40,7 +40,7 @@
             </div>
             <br>
             <div class="FILA4">
-                <input type="button" value="tan" onclick="document.calculadora.ans.value+=Math.tan" id="gris">
+                <input type="button" value="tan" onclick="document.calculadora.ans.value=Math.tan(document.calculadora.ans.value)" id="gris">
                 <input type="button" value="3" id="naranja" onclick="document.calculadora.ans.value+='3'">
                 <input type="button" value="2" id="naranja" onclick="document.calculadora.ans.value+='2'">
                 <input type="button" value="1" id="naranja" onclick="document.calculadora.ans.value+='1'">
@@ -48,7 +48,7 @@
             </div>
             <br>
             <div class="FILA5">
-                <input type="button" value="√" onclick="document.calculadora.ans.value+=Math.sqrt" id="gris">
+                <input type="button" value="√" onclick="document.calculadora.ans.value=Math.sqrt(document.calculadora.ans.value)" id="gris">
                 <input type="button" value="y√x" id="gris">
                 <input type="button" value="0" id="naranja" onclick="document.calculadora.ans.value+='0'">
                 <input type="button" value="-" id="gris" onclick="document.calculadora.ans.value+='-'">
@@ -59,11 +59,20 @@
                 <input type="button" value="x!" id="gris">
                 <input type="button" value="EXP" id="gris">
                 <input type="button" value="x10x" id="gris">
-                <input type="button" value="%" id="gris" onclick="document.calculadora.ans.value+='%'">
+                <input type="button" value="%" id="gris" onclick="porcentaje()">
                 <input type="button" value="." id="gris" onclick="document.calculadora.ans.value+='.'">
             </div>
         </form>
     </div>
+    <script>
+        function porcentaje(){
+            let resultado = 1;
+            let num = document.calculadora.ans.value;
+            resultado = num / 100;
+            document.calculadora.ans.value = resultado;
+        }
+
+    </script>
 </body>
 
 </html>
