@@ -19,7 +19,7 @@
                 <input type="button" value="M+" id="gris">
                 <input type="button" value="e" onclick="document.calculadora.ans.value+=Math.E" id="gris">
                 <input type="button" value="π" onclick="document.calculadora.ans.value+=Math.PI" id="gris">
-                <input type="button" value="AC" onclick="clearLast()" id="gris">
+                <input type="button" value="AC" onclick="" id="gris">
                 <input type="reset" value="C" id="gris">
             </div>
             <br>
@@ -57,7 +57,7 @@
             <br>
             <div class="FILA6">
                 <input type="button" value="x!" onclick="factorial()" id="gris">
-                <input type="button" value="EXP" onclick="exp" id="gris">
+                <input type="button" value="EXP" onclick="exp()" id="gris">
                 <input type="button" value="x10x" id="gris">
                 <input type="button" value="%" id="gris" onclick="porcentaje()">
                 <input type="button" value="." id="gris" onclick="document.calculadora.ans.value+='.'">
@@ -70,10 +70,6 @@
             let num = document.calculadora.ans.value;
             resultado = num / 100;
             document.calculadora.ans.value = resultado;
-        }
-        function clearLast() {
-            let num = document.calculadora.ans.value.slice(0, -1);
-            document.getElementById("textarea").value = document.calculadora.ans.value;
         }
         function factorial(){
             let num = document.calculadora.ans.value;
