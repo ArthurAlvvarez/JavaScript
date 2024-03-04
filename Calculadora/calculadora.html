@@ -16,10 +16,10 @@
         <form name="calculadora">
             <input type="textfield" id="textarea" name="ans" value="" autocomplete="off" readonly>
             <div class="FILA1">
-                <input type="button" value="M+" id="gris">
+                <input type="button" value="M+" onclick="m()" id="gris">
                 <input type="button" value="e" onclick="document.calculadora.ans.value+=Math.E" id="gris">
                 <input type="button" value="π" onclick="document.calculadora.ans.value+=Math.PI" id="gris">
-                <input type="button" value="AC" onclick="" id="gris">
+                <input type="button" value="AC" onclick="deleteChar()" id="gris">
                 <input type="reset" value="C" id="gris">
             </div>
             <br>
@@ -49,7 +49,7 @@
             <br>
             <div class="FILA5">
                 <input type="button" value="√" onclick="document.calculadora.ans.value=Math.sqrt(document.calculadora.ans.value)" id="gris">
-                <input type="button" value="y√x" id="gris">
+                <input type="button" value="3√x" onclick="cubica()" id="gris">
                 <input type="button" value="0" id="naranja" onclick="document.calculadora.ans.value+='0'">
                 <input type="button" value="-" id="gris" onclick="document.calculadora.ans.value+='-'">
                 <input type="button" value="=" id="negro" onclick="document.calculadora.ans.value=eval(document.calculadora.ans.value)">
@@ -57,36 +57,14 @@
             <br>
             <div class="FILA6">
                 <input type="button" value="x!" onclick="factorial()" id="gris">
-                <input type="button" value="EXP" onclick="exp()" id="gris">
-                <input type="button" value="x10x" id="gris">
+                <input type="button" value="EXP" onclick="x()" id="gris">
+                <input type="button" value="x10" onclick="diez()"  id="gris">
                 <input type="button" value="%" id="gris" onclick="porcentaje()">
                 <input type="button" value="." id="gris" onclick="document.calculadora.ans.value+='.'">
             </div>
         </form>
     </div>
-    <script>
-        function porcentaje(){
-            let resultado = 1;
-            let num = document.calculadora.ans.value;
-            resultado = num / 100;
-            document.calculadora.ans.value = resultado;
-        }
-        function factorial(){
-            let num = document.calculadora.ans.value;
-            resultado = 1;
-            for(i = num; i > 0;i--){
-                resultado *= i;
-            }
-            document.calculadora.ans.value = resultado;
-        }
-        function exp(){
-            let num = document.calculadora.ans.value;
-            let resultado = 1;
-            let num2 = document.calculadora.ans.value;
-            resultado = num * (Math.pow(10,num2));
-            document.calculadora.ans.value = resultado;
-        }
-    </script>
+    <script src="botones.js"></script>
 </body>
 
 </html>
