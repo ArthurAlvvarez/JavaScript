@@ -1,3 +1,4 @@
+ 
  function porcentaje(){
             let resultado = 1;
             let num = document.calculadora.ans.value;
@@ -34,9 +35,11 @@
             resultado = Math.pow(num, 1 / 3);
             document.calculadora.ans.value = resultado;
         }
-        function guardar(){
-            var numero = eval(document.calculadora.ans.value);
+        let memoria = 0;
+        function addToMemory() {
+            let num2 = parseFloat(document.calculadora.ans.value);
+            memoria += num2; 
         }
-        function m(){
-            document.calculadora.ans.value = numero;
+        function M(){
+            document.calculadora.ans.value = memoria;
         }
