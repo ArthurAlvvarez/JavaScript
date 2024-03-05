@@ -35,10 +35,9 @@
             resultado = Math.pow(num, 1 / 3);
             document.calculadora.ans.value = resultado;
         }
-        let memoria = 0;
+        var memoria = 0;
         function addToMemory() {
-            let num2 = parseFloat(document.calculadora.ans.value);
-            memoria += num2; 
+            memoria = parseFloat(document.calculadora.ans.value);
         }
         function M(){
             document.calculadora.ans.value = memoria;
