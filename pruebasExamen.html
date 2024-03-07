@@ -7,19 +7,51 @@
 </head>
 <body>
     <script>
-        var texto = prompt("Dime algo");
-        texto = texto.replace(" ", "");
-        var letras = "";
-        var cont = 0;
-        for(i = texto.length - 1; i >= 0; i--){
-            letras += texto.charAt(i); 
-            cont ++;
-        }
-        if(texto === letras){
-            alert("Es palindromo y tiene " + cont + " letras");
-        }else{
-            alert("No es palindromo");
-        }
+        //  var texto = prompt("Dime algo");
+        //  texto = texto.replace(/\s/g, "");
+        //  var letras = "";
+        //  var cont = 0;
+        //  for(i = texto.length - 1; i >= 0; i--){
+        //      letras += texto.charAt(i); 
+        //      cont ++;
+        //  }
+        //  texto = texto.toUpperCase();
+        //  letras = letras.toUpperCase();
+        //  if(texto === letras){
+        //      alert("Es palindromo y tiene " + cont + " letras");
+        //  }else{
+        //      alert("No es palindromo");
+        //  }
+         
+        // let num = parseInt(prompt("Dime un numero"));
+        // alert((num % 2 == 0)? "Par" : "Impar");
+
+        // function capicua(num){
+        //     var cadenanumero = num.toString();
+        //     var cadenainvertida = cadenanumero.split(" ").reverse().join("");
+
+        //     if(cadenanumero === cadenainvertida){
+        //         alert("Es capicua") ; 
+        //     }else{
+        //         alert("No es capicua") ;
+        //     }
+        // }
+        // capicua(12321) ;
+
+        var numeros = [8, 5, 6];
+        // for(i = 0; i < numeros.length; i++){
+        //     for(j = 0; j < numeros[i]; j++){
+        //         document.write("@");
+        //     }
+        //     document.write("<br>");
+        // }
+        numeros.forEach(function (valor, i, lista){
+            lista[i] = valor.toString();
+        })
+        document.write(numeros);
+
+       let num = num2 => num2 % 2 == 0? "Par" : "Impar";
+       alert(num(4));
     </script>
 </body>
 </html>
